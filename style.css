@@ -1,0 +1,100 @@
+input[type="range"].volumeSlider {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 5px 0;
+}
+
+input[type="range"].volumeSlider:focus {
+  outline: none;
+}
+
+input[type="range"].volumeSlider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+          box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: #000000;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+
+input[type="range"].volumeSlider::-webkit-slider-thumb {
+  -webkit-box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+          box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 0.9px solid #000000;
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5px;
+}
+
+input[type="range"].volumeSlider:focus::-webkit-slider-runnable-track {
+  background: #0d0d0d;
+}
+
+input[type="range"].volumeSlider::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: #000000;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+
+input[type="range"].volumeSlider::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 0.9px solid #000000;
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+input[type="range"].volumeSlider::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type="range"].volumeSlider::-ms-fill-lower {
+  background: #000000;
+  border: 0px solid #010101;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+
+input[type="range"].volumeSlider::-ms-fill-upper {
+  background: #000000;
+  border: 0px solid #010101;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+
+input[type="range"].volumeSlider::-ms-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 0.9px solid #000000;
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: pointer;
+  height: 5px;
+}
+
+input[type="range"].volumeSlider:focus::-ms-fill-lower {
+  background: #000000;
+}
+
+input[type="range"].volumeSlider:focus::-ms-fill-upper {
+  background: #0d0d0d;
+}
+/*# sourceMappingURL=style.css.map */

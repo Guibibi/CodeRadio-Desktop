@@ -35,6 +35,9 @@ body {
     top: 25%;
     left: 30%;
     cursor: pointer;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 
   &.fa-pause {
@@ -43,6 +46,9 @@ body {
     top: 25%;
     left: 30%;
     cursor: pointer;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 
   &.fa-times {
@@ -52,6 +58,9 @@ body {
     -webkit-app-region: no-drag;
     -webkit-user-select: none;
     cursor: pointer;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 }
 

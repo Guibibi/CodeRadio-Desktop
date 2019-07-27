@@ -1,25 +1,33 @@
 {
-  "name": "electron-quick-start",
+  "name": "coderadio",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "A minimalist radio player for code Radio by FreeCodeCamp",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
     "Electron",
     "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "freecodecamp",
+    "code",
+    "radio"
   ],
-  "author": "GitHub",
+  "author": "Guillaume Bedard",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^5.0.6"
-  },
-  "dependencies": {
+    "electron": "^5.0.6",
+    "electron-builder": "^21.1.5",
     "electron-reload": "^1.4.1"
+  },
+  "dependencies": {},
+  "build": {
+    "appId": "guibibi.coderadio",
+    "mac": {
+      "category": "your.app.category.type"
+    }
   }
 }

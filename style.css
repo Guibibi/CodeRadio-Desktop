@@ -41,12 +41,22 @@ body {
   cursor: pointer;
 }
 
+.fas.fa-play:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
 .fas.fa-pause {
   font-size: 1.5rem;
   position: relative;
   top: 25%;
   left: 30%;
   cursor: pointer;
+}
+
+.fas.fa-pause:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .fas.fa-times {
@@ -56,6 +66,11 @@ body {
   -webkit-app-region: no-drag;
   -webkit-user-select: none;
   cursor: pointer;
+}
+
+.fas.fa-times:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .album-cover {

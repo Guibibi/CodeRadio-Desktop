@@ -63,4 +63,4 @@ app.on("activate", function() {
 const electron = require("electron");
 
 // Enable live reload for all the files inside your project directory
-require("electron-reload")(__dirname);
+//require("electron-reload")(__dirname);

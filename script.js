@@ -1,5 +1,5 @@
 //This script is made for the HTTP request for the music information.
-
+const remote = require("electron").remote;
 var request = new XMLHttpRequest();
 
 //Get the music info
@@ -11,10 +11,7 @@ setInterval(function() {
   );
 
   request.onreadystatechange = e => {
-    console.log(request.responseText);
     if (request.readyState == 4 && request.status == 200) {
-      console.log("Ready state is " + request.readyState);
-      console.log("HTTP Status is " + request.status);
       //Parse the json into text
       var response = JSON.parse(request.responseText);
 
@@ -31,3 +28,10 @@ setInterval(function() {
   //Time in ms between requests
   request.send();
 }, 5000);
+
+//This will make the window close when pressing the close button
+
+function closeApp() {
+  var window = remote.getCurrentWindow();
+  window.close();
+}

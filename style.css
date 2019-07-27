@@ -1,7 +1,44 @@
+html {
+  height: 200px;
+  width: 500px;
+  overflow: hidden;
+}
+
+.container {
+  background-color: grey;
+  border-radius: 15px;
+  width: 490px;
+  height: 90px;
+  margin-bottom: 30px;
+}
+
+.player {
+  margin-left: 1rem;
+}
+
+#art {
+  width: 70px;
+  height: 70px;
+}
+
+#playButton {
+  -webkit-app-region: no-drag;
+}
+
+div {
+  display: inline-block;
+}
+
+body {
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+}
+
 input[type="range"].volumeSlider {
   -webkit-appearance: none;
-  width: 200px;
+  width: 100px;
   margin: 5px 0;
+  -webkit-app-region: no-drag;
 }
 
 input[type="range"].volumeSlider:focus {

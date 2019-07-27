@@ -1,3 +1,5 @@
+//This script is made for the HTTP request for the music information.
+
 var request = new XMLHttpRequest();
 
 //Get the music info
@@ -21,6 +23,8 @@ setInterval(function() {
         response.now_playing.song.artist;
       document.getElementById("song").innerHTML =
         response.now_playing.song.title;
+
+      document.getElementById("art").src = response.now_playing.song.art;
     }
   };
 

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Coderadio Desktop</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/96bb303f41.js"></script>
+  </head>
+
+  <body>
+    <audio id="codeRadio">
+      <source
+        src="https://coderadio-admin.freecodecamp.org/radio/8010/radio.mp3"
+      />
+    </audio>
+
+    <div class="container">
+      <div class="album-cover">
+        <img id="art" src="assets\img\cover_placeholder.gif" alt="" />
+      </div>
+      <div class="info">
+        <h3 id="song">Buffering...</h3>
+        <h2 id="artist">Info...</h2>
+      </div>
+
+      <div class="controls">
+        <i id="playButton" onclick="toggleAudio()" class="fas fa-play"></i>
+
+        <div id="slider">
+          <i class="fas fa-volume-down"></i>
+          <input
+            type="range"
+            name="volume"
+            min="0"
+            max="100"
+            value="50"
+            class="volumeSlider"
+            onchange="changeVolume(this.value)"
+            oninput="changeVolume(this.value)"
+          />
+          <i class="fas fa-volume-up"></i>
+        </div>
+        <i onclick="closeApp()" class="fas fa-times close-btn"></i>
+      </div>
+    </div>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+    <script src="script.js"></script>
+    <script>
+      //Get the audio element on the page.
+      var x = document.getElementById("codeRadio");
+
+      //Set the starting volume at 50%
+      var volume = (x.volume = 0.5);
+      var isPlaying = false;
+
+      function toggleAudio() {
+        var playButton = document.getElementById("playButton");
+
+        //Start and stop the music.
+        if (isPlaying == false) {
+          x.play();
+          isPlaying = true;
+          playButton.classList.replace("fa-play", "fa-pause");
+        } else if (isPlaying == true) {
+          x.pause();
+          isPlaying = false;
+          playButton.classList.replace("fa-pause", "fa-play");
+        }
+      }
+
+      function changeVolume(y) {
+        x.volume = y / 100;
+      }
+    </script>
+  </body>
+</html>

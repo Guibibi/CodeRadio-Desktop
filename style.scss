@@ -1,0 +1,202 @@
+html {
+  height: 100px;
+  width: 500px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+body {
+  border: 2px solid black;
+  border-radius: 25px;
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+  height: 100px;
+  width: 500px;
+}
+
+.container {
+  background-color: rgba(81, 90, 90, 0.8);
+  border-radius: 15px;
+  width: 490px;
+  height: 90px;
+  display: grid;
+  grid-template-columns: 0fr 1fr 0.5fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "art info controls";
+  overflow: hidden;
+}
+
+.fas {
+  color: white;
+
+  &.fa-play {
+    font-size: 1.5rem;
+    position: relative;
+    top: 25%;
+    left: 30%;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &.fa-pause {
+    font-size: 1.5rem;
+    position: relative;
+    top: 25%;
+    left: 30%;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &.fa-times {
+    color: white;
+    position: relative;
+    left: 65%;
+    -webkit-app-region: no-drag;
+    -webkit-user-select: none;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.album-cover {
+  grid-area: art;
+}
+
+.info {
+  grid-area: info;
+
+  line-height: 2rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 10px;
+}
+.controls {
+  grid-area: controls;
+}
+
+.hidden {
+  display: none;
+}
+#slider {
+  position: absolute;
+  bottom: 20%;
+  right: 4%;
+}
+
+#art {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+}
+
+#playButton {
+  -webkit-app-region: no-drag;
+}
+
+#song {
+  color: white;
+  font-size: 1rem;
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 1rem;
+}
+
+#artist {
+  font-family: "Roboto", sans-serif;
+  color: #b2babb;
+  font-size: 0.9rem;
+}
+//Slider styling
+
+input[type="range"].volumeSlider {
+  -webkit-appearance: none;
+  width: 100px;
+  -webkit-app-region: no-drag;
+  position: relative;
+  bottom: 3px;
+}
+input[type="range"].volumeSlider:focus {
+  outline: none;
+}
+input[type="range"].volumeSlider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: #b0bec5;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+input[type="range"].volumeSlider::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 0.9px solid #000000;
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5px;
+}
+input[type="range"].volumeSlider:focus::-webkit-slider-runnable-track {
+  background: #b0bec5;
+}
+input[type="range"].volumeSlider::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: #000000;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+input[type="range"].volumeSlider::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 0.9px solid #000000;
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type="range"].volumeSlider::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type="range"].volumeSlider::-ms-fill-lower {
+  background: #000000;
+  border: 0px solid #010101;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+input[type="range"].volumeSlider::-ms-fill-upper {
+  background: #000000;
+  border: 0px solid #010101;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+input[type="range"].volumeSlider::-ms-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 0.9px solid #000000;
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: pointer;
+  height: 5px;
+}
+input[type="range"].volumeSlider:focus::-ms-fill-lower {
+  background: #000000;
+}
+input[type="range"].volumeSlider:focus::-ms-fill-upper {
+  background: #0d0d0d;
+}

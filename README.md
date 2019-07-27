@@ -1,18 +1,15 @@
-# electron-quick-start
+# CodeRadio Desktop
 
-**Clone and run for a quick way to see Electron in action.**
+**Listen to Coderadio from FreeCodeCamp without opening your browser!**
 
-This is a minimal Electron application based on the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start) within the Electron documentation.
+This minimalist electron app will stream your favortite radio from your desktop!
 
-**Use this app along with the [Electron API Demos](https://electronjs.org/#get-started) app for API code examples to help you get started.**
+![Image of application](https://i.imgur.com/8iCTM3j.png)
 
-A basic Electron application needs just these files:
+**How to download**
 
-- `package.json` - Points to the app's main file and lists its details and dependencies.
-- `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
-- `index.html` - A web page to render. This is the app's **renderer process**.
-
-You can learn more about each of these components within the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start).
+You can download the .exe or linux release from the releases tab on github,
+or clone the git and run it from electron itself.
 
 ## To Use
 
@@ -20,25 +17,14 @@ To clone and run this repository you'll need [Git](https://git-scm.com) and [Nod
 
 ```bash
 # Clone this repository
-git clone https://github.com/electron/electron-quick-start
+git clone https://github.com/Guibibi/CodeRadio-Desktop.git
 # Go into the repository
-cd electron-quick-start
+cd CodeRadio-Desktop
 # Install dependencies
 npm install
 # Run the app
 npm start
 ```
-
-Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
-
-## Resources for Learning Electron
-
-- [electronjs.org/docs](https://electronjs.org/docs) - all of Electron's documentation
-- [electronjs.org/community#boilerplates](https://electronjs.org/community#boilerplates) - sample starter apps created by the community
-- [electron/electron-quick-start](https://github.com/electron/electron-quick-start) - a very basic starter Electron app
-- [electron/simple-samples](https://github.com/electron/simple-samples) - small applications with ideas for taking them further
-- [electron/electron-api-demos](https://github.com/electron/electron-api-demos) - an Electron app that teaches you how to use Electron
-- [hokein/electron-sample-apps](https://github.com/hokein/electron-sample-apps) - small demo apps for the various Electron APIs
 
 ## License
 

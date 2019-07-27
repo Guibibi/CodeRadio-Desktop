@@ -1,19 +1,43 @@
 html {
-  height: 200px;
+  height: 100px;
   width: 500px;
   overflow: hidden;
+  border-radius: 15px;
+}
+
+body {
+  border: 2px solid black;
+  border-radius: 25px;
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+  height: 100px;
+  width: 500px;
+}
+
+div {
+  display: inline-block;
 }
 
 .container {
   background-color: grey;
+  transform: scale(0.9);
   border-radius: 15px;
   width: 490px;
   height: 90px;
-  margin-bottom: 30px;
 }
 
-.player {
-  margin-left: 1rem;
+.album-cover {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.info {
+  text-align: center;
+  display: inline-flex;
+  flex-direction: column;
+}
+.controls {
+  float: right;
 }
 
 #art {
@@ -25,14 +49,6 @@ html {
   -webkit-app-region: no-drag;
 }
 
-div {
-  display: inline-block;
-}
-
-body {
-  -webkit-app-region: drag;
-  -webkit-user-select: none;
-}
 //Slider styling
 
 input[type="range"].volumeSlider {

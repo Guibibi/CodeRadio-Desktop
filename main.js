@@ -15,8 +15,9 @@ function createWindow() {
     useContentSize: true,
     transparent: true,
     resizable: false,
-    alwaysOnTop: true,
-
+    alwaysOnTop: false,
+    x: 10,
+    y: 50,
     webPreferences: {
       nodeIntegration: true,
       preload: path.join(__dirname, "preload.js")

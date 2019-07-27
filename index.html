@@ -2,40 +2,50 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Hello World!</title>
+    <title>Coderadio Desktop</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/96bb303f41.js"></script>
     <script src="script.js"></script>
   </head>
+
   <body>
     <audio id="codeRadio">
-      <source src="https://coderadio-admin.freecodecamp.org:8010/radio.mp3" />
-    </audio>
-    <div class="info">
-      <h2 id="artist">Test</h2>
-      <h3 id="song">Test</h3>
-    </div>
-
-    <i class="fas fa-pause"></i>
-    <i class="fas fa-play"></i>
-    <button onclick="playAudio()">Play</button>
-    <button onclick="stopAudio()">Stop</button>
-
-    <div id="slider">
-      <i class="fas fa-volume-down"></i>
-      <input
-        type="range"
-        name="volume"
-        min="0"
-        max="100"
-        value="50"
-        class="volumeSlider"
-        onchange="changeVolume(this.value)"
-        oninput="changeVolume(this.value)"
+      <source
+        src="https://coderadio-admin.freecodecamp.org/radio/8010/radio.mp3"
       />
-      <i class="fas fa-volume-up"></i>
+    </audio>
+
+    <div class="">
+      <div class="">
+        <div class="info">
+          <h2 id="artist">~</h2>
+          <h3 id="song">~</h3>
+        </div>
+      </div>
+
+      <div class="">
+        <i class="fas fa-pause"></i>
+        <i class="fas fa-play"></i>
+        <button onclick="playAudio()">Play</button>
+        <button onclick="stopAudio()">Stop</button>
+
+        <div id="slider">
+          <i class="fas fa-volume-down"></i>
+          <input
+            type="range"
+            name="volume"
+            min="0"
+            max="100"
+            value="50"
+            class="volumeSlider"
+            onchange="changeVolume(this.value)"
+            oninput="changeVolume(this.value)"
+          />
+          <i class="fas fa-volume-up"></i>
+        </div>
+      </div>
+      <div id="debug"></div>
     </div>
-    <div id="debug"></div>
     <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>
     <script>

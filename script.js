@@ -1,23 +1,29 @@
 var request = new XMLHttpRequest();
 
+//Get the music info
 setInterval(function() {
   request.open(
     "GET",
-    "https://coderadio-admin.freecodecamp.org:8010/status-json.xsl",
+    "https://coderadio-admin.freecodecamp.org/api/nowplaying_static/coderadio.json",
     true
   );
 
   request.onreadystatechange = e => {
     console.log(request.responseText);
     if (request.readyState == 4 && request.status == 200) {
+      console.log("Ready state is " + request.readyState);
+      console.log("HTTP Status is " + request.status);
+      //Parse the json into text
       var response = JSON.parse(request.responseText);
-      //alert(response.icestats.source[0].artist);
+
+      //Update the info from the music with the json file from the api.
       document.getElementById("artist").innerHTML =
-        response.icestats.source[0].artist;
+        response.now_playing.song.artist;
       document.getElementById("song").innerHTML =
-        response.icestats.source[0].yp_currently_playing;
+        response.now_playing.song.title;
     }
   };
 
+  //Time in ms between requests
   request.send();
 }, 5000);

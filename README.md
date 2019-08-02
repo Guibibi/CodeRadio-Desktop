@@ -6,6 +6,15 @@ This minimalist electron app will stream your favortite radio from your desktop!
 
 ![Image of application](https://i.imgur.com/8iCTM3j.png)
 
+# Features
+* Minimalist design.
+
+* Works on both Linux and Windows.
+
+* Small windows size.
+
+* Support for Play/Pause button on your keyboard.
+
 **How to download**
 
 You can download the .exe or linux release from the releases tab on github,
@@ -24,6 +33,8 @@ cd CodeRadio-Desktop
 npm install
 # Run the app
 npm start
+# Compile the executable
+npm run dist
 ```
 
 ## Helping

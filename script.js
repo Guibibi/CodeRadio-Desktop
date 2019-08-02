@@ -1,5 +1,6 @@
 //This script is made for the HTTP request for the music information.
-const remote = require("electron").remote;
+//const remote = require("electron").remote;
+const { remote, ipcRenderer } = require("electron");
 var request = new XMLHttpRequest();
 
 document.onreadystatechange = function() {
@@ -42,8 +43,13 @@ function requestInfo() {
 }
 
 //This will make the window close when pressing the close button
-
 function closeApp() {
   var window = remote.getCurrentWindow();
   window.close();
 }
+
+//Toggle audio playback when the app send the ipc message of the MediaPlayPause button was pressed.
+ipcRenderer.on("keypressed", event => {
+  console.log(event);
+  toggleAudio();
+});

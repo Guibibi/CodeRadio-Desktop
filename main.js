@@ -1,5 +1,11 @@
 // Modules to control application life and create native browser window
-const { app, BrowserWindow } = require("electron");
+const {
+  app,
+  BrowserWindow,
+  globalShortcut,
+  ipcMain,
+  webContents
+} = require("electron");
 const path = require("path");
 
 // Keep a global reference of the window object, if you don't, the window will
@@ -43,6 +49,14 @@ function createWindow() {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on("ready", createWindow);
+
+//This will listen to the keyboard Play/Pause button, even when the window is unfocused(blurred).
+//It will then send the keypress to the IPC channel of the renderer.
+app.on("ready", () => {
+  globalShortcut.register("MediaPlayPause", () => {
+    mainWindow.webContents.send("keypressed");
+  });
+});
 
 // Quit when all windows are closed.
 app.on("window-all-closed", function() {

@@ -26,6 +26,10 @@ npm install
 npm start
 ```
 
+## Helping
+
+You are free to create pull request or create issues if you find any.
+
 ## License
 
 [CC0 1.0 (Public Domain)](LICENSE.md)

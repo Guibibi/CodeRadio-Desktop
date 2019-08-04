@@ -14,9 +14,7 @@
 
   <body>
     <audio id="codeRadio">
-      <source
-        src="https://coderadio-admin.freecodecamp.org/radio/8010/radio.mp3"
-      />
+      <source src="" />
     </audio>
 
     <div class="container">
@@ -62,14 +60,19 @@
 
       function toggleAudio() {
         var playButton = document.getElementById("playButton");
+        const src =
+          "https://coderadio-admin.freecodecamp.org/radio/8010/radio.mp3";
 
         //Start and stop the music.
         if (isPlaying == false) {
+          x.src = src;
           x.play();
           isPlaying = true;
           playButton.classList.replace("fa-play", "fa-pause");
         } else if (isPlaying == true) {
           x.pause();
+          x.src = "";
+          player.currentTime = 0;
           isPlaying = false;
           playButton.classList.replace("fa-pause", "fa-play");
         }

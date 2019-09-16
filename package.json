@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron .",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder -wl"
+    "dist": "electron-builder -wlm"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -20,14 +20,14 @@
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^6.0.0",
-    "electron-builder": "^21.1.5",
+    "electron-builder": "^21.2.0",
     "electron-reload": "^1.4.1"
   },
   "dependencies": {},
   "build": {
     "appId": "guibibi.coderadio",
     "mac": {
-      "category": "your.app.category.type"
+      "category": "public.app-category.music"
     }
   }
 }

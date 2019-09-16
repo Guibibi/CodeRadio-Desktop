@@ -71,8 +71,8 @@
           playButton.classList.replace("fa-play", "fa-pause");
         } else if (isPlaying == true) {
           x.pause();
+          x.currentTime = 0;
           x.src = "";
-          player.currentTime = 0;
           isPlaying = false;
           playButton.classList.replace("fa-pause", "fa-play");
         }

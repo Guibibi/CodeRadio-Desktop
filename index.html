@@ -35,8 +35,8 @@
             type="range"
             name="volume"
             min="0"
-            max="100"
-            value="50"
+            max="50"
+            value="25"
             class="volumeSlider"
             onchange="changeVolume(this.value)"
             oninput="changeVolume(this.value)"
@@ -55,7 +55,7 @@
       var x = document.getElementById("codeRadio");
 
       //Set the starting volume at 50%
-      var volume = (x.volume = 0.5);
+      var volume = (x.volume = 0.25);
       var isPlaying = false;
 
       function toggleAudio() {

@@ -19,14 +19,11 @@ jobs:
         with:
           node-version: 18
 
-      - name: Build/release Electron app
-        uses: crazy-max/ghaction-electron-builder@v1
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build and release Electron app
+        run: npm run dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          # The release option determines whether a new GitHub release should be created
-          release: ${{ startsWith(github.ref, 'refs/tags/v') }}
-          # Optional: specify the command to run for building, if not default
-          # build_command: "npm run dist" 
-          # Optional: specify the root of your app, if not the repository root
-          # app_root: "." 
+        if: startsWith(github.ref, 'refs/tags/v')

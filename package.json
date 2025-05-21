@@ -19,8 +19,8 @@
   "author": "Guillaume Bedard",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^28.2.0",
-    "electron-builder": "^24.9.1",
+    "electron": "^36.2.1",
+    "electron-builder": "^26.0.12",
     "electron-reload": "^1.5.0"
   },
   "dependencies": {},

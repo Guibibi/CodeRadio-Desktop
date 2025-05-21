@@ -1,10 +1,40 @@
+//Get the audio element on the page.
+const x = document.getElementById("codeRadio");
+
+//Set the starting volume at 75%
+x.volume = 0.75;
+let isPlaying = false;
+
+function toggleAudio() {
+  var playButton = document.getElementById("playButton");
+  const src =
+    "https://coderadio-admin.freecodecamp.org/radio/8010/radio.mp3";
+
+  //Start and stop the music.
+  if (isPlaying == false) {
+    x.src = src;
+    x.play();
+    isPlaying = true;
+    playButton.classList.replace("fa-play", "fa-pause");
+  } else if (isPlaying == true) {
+    x.pause();
+    x.currentTime = 0;
+    x.src = "";
+    isPlaying = false;
+    playButton.classList.replace("fa-pause", "fa-play");
+  }
+}
+
+function changeVolume(y) {
+  x.volume = y / 100;
+}
+
 //This script is made for the HTTP request for the music information.
 //const remote = require("electron").remote;
 const { remote, ipcRenderer } = require("electron");
 var request = new XMLHttpRequest();
 
 document.onreadystatechange = function() {
-  console.log("I am tired");
   var state = document.readyState;
   if (state == "complete") {
     requestInfo();

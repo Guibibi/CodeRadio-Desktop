@@ -35,8 +35,8 @@
             type="range"
             name="volume"
             min="0"
-            max="50"
-            value="25"
+            max="100"
+            value="75"
             class="volumeSlider"
             onchange="changeVolume(this.value)"
             oninput="changeVolume(this.value)"
@@ -51,36 +51,7 @@
     <script src="./renderer.js"></script>
     <script src="script.js"></script>
     <script>
-      //Get the audio element on the page.
-      var x = document.getElementById("codeRadio");
-
-      //Set the starting volume at 50%
-      var volume = (x.volume = 0.25);
-      var isPlaying = false;
-
-      function toggleAudio() {
-        var playButton = document.getElementById("playButton");
-        const src =
-          "https://coderadio-admin.freecodecamp.org/radio/8010/radio.mp3";
-
-        //Start and stop the music.
-        if (isPlaying == false) {
-          x.src = src;
-          x.play();
-          isPlaying = true;
-          playButton.classList.replace("fa-play", "fa-pause");
-        } else if (isPlaying == true) {
-          x.pause();
-          x.currentTime = 0;
-          x.src = "";
-          isPlaying = false;
-          playButton.classList.replace("fa-pause", "fa-play");
-        }
-      }
-
-      function changeVolume(y) {
-        x.volume = y / 100;
-      }
+      // Functions and variables moved to script.js
     </script>
   </body>
 </html>
